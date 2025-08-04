@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Add fade in animation for products */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+/* Brush stroke animation */
+@keyframes brushStroke {
+  0% {
+    stroke-dashoffset: 1000;
+    fill-opacity: 0;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill-opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+.brush-animation {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: brushStroke 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Character writing animation */
+@keyframes writeCharacter {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.write-animation {
+  animation: writeCharacter 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
