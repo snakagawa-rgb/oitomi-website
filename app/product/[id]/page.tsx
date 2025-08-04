@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import InquiryForm from '../../components/InquiryForm';
+import { useState } from 'react';
 
 const products = {
   'udon': {
@@ -93,10 +96,6 @@ const products = {
     bg: '#e74c3c',
   },
 };
-
-'use client';
-
-import { useState } from 'react';
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
